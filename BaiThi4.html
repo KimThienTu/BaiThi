@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="demo"></canvas>
+<script>
+  // Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả của lớp hình chữ nhật như sau:
+  // Rectangle: Tên lớp
+  // - x: Tọa độ x
+  // - y: Tọa độ y
+  // - width: Chiều rộng
+  // - height: Chiều cao
+  // - color: Màu sắc (sử dụng mã màu hex)
+  // + render(canvas): Hiển thị hình chữ nhật trên một can vas
+
+  let Rectangle = function (x,y,width,height,color){
+      this.x = x;
+      this.y = y;
+      this.width =width;
+      this.height = height;
+      this.color = color;
+
+      this.getX = function (){
+          return this.x ;
+      }
+      this.getY = function (){
+          return this.y ;
+      }
+      this.getWidth = function (){
+          return this.width;
+      }
+      this.getHeight = function (){
+          return this.height;
+      }
+      this.getColor = function (){
+          return this.color ;
+      }
+  }
+  let rectangle = new Rectangle(10,10,200,100,`#000000`);
+  let x = rectangle.getX();
+  let y = rectangle.getY();
+  let width = rectangle.getWidth();
+  let height = rectangle.getHeight();
+  let color = rectangle.getColor();
+  let canvas = document.getElementById('demo');
+  let ctx = canvas.getContext('2d');
+  ctx.fillStyle= color;
+  ctx.fillRect( x , y , width, height);
+</script>
+</body>
+</html>

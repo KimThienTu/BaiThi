@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Bài 2: Viết hàm tryRemoveFromArray() nhận vào tham số là một mảng và một số nguyên index,
+  // trả về mảng ban đầu đã được loại bỏ phần tử tai vị trí index nếu index hợp lệ.
+  // Nếu index không hợp lệ, trả về mảng ban đầu. (không dùng hàm co sẵn để xóa mảng)
+
+  let arr = ["cam", "tao", "dua","le"];
+  let index = 2;
+
+  console.log(tryRemoveFromArray(arr, index));
+
+  function tryRemoveFromArray(arr, index) {
+      let string = "";
+      for (let i = 0; i < arr.length; i++) {
+          if (i === index) {
+              arr[index] = string
+          }
+      }
+      return arr;
+  }
+  document.write(tryRemoveFromArray(arr, index));
+</script>
+</body>
+</html>
